@@ -7,6 +7,7 @@ import soundfile as sf
 
 max_strech = 1.05   
 max_compress = 0.95
+fade_durr= 50
 
 video_pth= "data/input/Tanzania-2.mp4"
 ref_audio= "data/output/ref_aud.wav"
@@ -48,7 +49,6 @@ for line in text:
             factor = max_compress
         y_stretched = pyrb.time_stretch(y, sr, factor)
     
-    # stretched_path = f_pth.replace(".wav", "_stretched.wav")
     sf.write(f_pth, y_stretched, sr)
 
     curr_aud = AudioSegment.from_wav(f_pth)
@@ -58,6 +58,8 @@ for line in text:
     else:
         print(f"German longer by {len(curr_aud) - curr_dur} ms")
         curr_aud= curr_aud[:curr_dur]
+    
+    curr_aud = curr_aud.fade_in(fade_durr).fade_out(fade_durr)
     
     if start_t> len(audio_full):
         audio_full+= AudioSegment.silent(duration= (start_t-len(audio_full)))

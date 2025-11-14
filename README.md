@@ -34,50 +34,48 @@ This project implements a full pipeline for video translation and dubbing from E
 # Installation and Setup
 
 1) Clone the respository
-'''
+```python
 git clone https://github.com/NikitaMalik2303/VideoTranslation_Heygen.git
 cd VideoTranslation_Heygen
-'''
+```
 
 2) Create conda environment
-'''
+```python
 conda create -n video_translation python=3.10.19
 conda activate video_translation 
-'''
+```
 
 3) Install Dependencies
-'''
+```python
 pip install -r requirements.txt
-'''
+```
 
-4) Tranlation 
-'''
+4) Translation 
+```python
 python main/translate.py
-'''
+```
 
 The translated captions in german are stored in output
 
 5) Extract reference audio for voice cloning
-'''
+```python
 ffmpeg -i data/input/Tanzania-2.mp4 -ss 00:00:01 -t 10 -vn data/output/ref_aud.wav
-'''
+```
 
 6) Generating synchronised German audio
-'''
+```python
 python main/audio_syn.py 
-'''
+```
 
 The generated audio is saved in data/output/translated_audio.wav
 
 7) Replacing original video audio with german audio
-'''
+```python
 main/replace_audio.sh data/input/Tanzania-2.mp4 data/output/translated_audio.wav data/output/Tanzania-German.mp4
-'''
+```
 
 The generated video is saved in data/output/Tanzania-German.mp4
 
 # Generated Video
 
-<video src="data/output/Tanzania-German.mp4" width="600" controls>
-  Video not supported.
-</video>
+<video src="https://github.com/NikitaMalik2303/VideoTranslation_Heygen/blob/main/data/output/Tanzania-German.mp4" width="600" controls></video>
