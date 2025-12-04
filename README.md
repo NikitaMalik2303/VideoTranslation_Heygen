@@ -78,4 +78,4 @@ The generated video is saved in data/output/Tanzania-German.mp4
 
 # Generated Video
 
-<video src="https://github.com/NikitaMalik2303/VideoTranslation_Heygen/blob/main/data/output/Tanzania-German.mp4" width="600" controls></video>
+<video src="https://drive.google.com/file/d/1Abvvcl9Tt_LLVyJ9Y4ThlpsFtALeXW-a/view?usp=sharing" width="600" controls></video>
