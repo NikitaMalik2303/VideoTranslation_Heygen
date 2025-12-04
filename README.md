@@ -67,6 +67,8 @@ ffmpeg -i data/input/Tanzania-2.mp4 -ss 00:00:01 -t 10 -vn data/output/ref_aud.w
 python main/audio_syn.py 
 ```
 
+
+
 The generated audio is saved in data/output/translated_audio.wav
 
 7) Replacing original video audio with german audio
@@ -78,4 +80,5 @@ The generated video is saved in data/output/Tanzania-German.mp4
 
 # Generated Video
 
-<video src="https://raw.githubusercontent.com/NikitaMalik2303/VideoTranslation_Heygen/main/data/output/Tanzania-German.mp4" width="600" controls></video>
+https://github.com/user-attachments/assets/28f6dcb5-8e64-4059-9689-e454ff7f578f
+<!-- <video src="https://raw.githubusercontent.com/NikitaMalik2303/VideoTranslation_Heygen/main/data/output/Tanzania-German.mp4" width="600" controls></video> -->
